@@ -1,0 +1,95 @@
+---
+version: 6.5.4-3
+pkgbase:
+  name: sonic-win
+  pkgdesc: An X11-only, lighter-weight fork of KWin
+  pkgver: 6.5.4
+  pkgrel: 3
+  url: https://github.com/Sonic-DE/sonic-win
+  install: sonic-win.install
+  arch:
+    - x86_64
+  groups:
+    - sonicde
+  license:
+    - LGPL-2.0-or-later
+  makedepends:
+    - extra-cmake-modules
+    - git
+    - kdoctools
+    - libelogind
+    - plasma-wayland-protocols
+    - python
+    - wayland-protocols
+  depends:
+    - aurorae
+    - breeze
+    - gcc-libs
+    - glibc
+    - plasma-activities
+    - kauth
+    - kcmutils
+    - kcolorscheme
+    - kconfig
+    - kcoreaddons
+    - kcrash
+    - kdeclarative
+    - kdecoration
+    - kglobalaccel
+    - kglobalacceld
+    - kguiaddons
+    - ki18n
+    - kirigami
+    - kitemmodels
+    - knewstuff
+    - knighttime
+    - knotifications
+    - kpackage
+    - kquickcharts
+    - kscreenlocker
+    - kservice
+    - ksvg
+    - kwidgetsaddons
+    - kwindowsystem
+    - kxmlgui
+    - lcms2
+    - libcanberra
+    - libdisplay-info
+    - libdrm
+    - libepoxy
+    - libplasma=6.5.4
+    - libqaccessibilityclient-qt6
+    - libx11
+    - libxcb
+    - libxi
+    - libxkbcommon
+    - libxkbcommon-x11
+    - mesa
+    - qt6-5compat
+    - qt6-base
+    - qt6-declarative
+    - qt6-sensors
+    - qt6-svg
+    - qt6-tools
+    - qt6-wayland
+    - wayland
+    - xcb-util-cursor
+    - xcb-util-keysyms
+    - xcb-util-wm
+  provides:
+    - kwin-x11
+    - kwin-x11-sonic
+  conflicts:
+    - kwin-x11
+    - kwin-x11-sonic
+  replaces:
+    - kwin-x11-sonic
+  options:
+    - '!debug'
+  source:
+    - https://github.com/Sonic-DE/sonic-win/archive/refs/tags/6.5.4.tar.gz
+  sha256sums:
+    - fce093b1ae4079604bb38996a99395134a102ecc76cb92a945e92e02b09337d4
+pkgname:
+  - name: sonic-win
+# generated with artixpkg 0.37.4-1-any
