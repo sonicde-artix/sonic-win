@@ -4,7 +4,7 @@ pkgname=sonic-win
 _pkgname=kwin-x11
 pkgver=6.5.4
 _pkgtag=6.5.4
-pkgrel=4
+pkgrel=5
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
@@ -73,8 +73,6 @@ makedepends=(extra-cmake-modules
 groups=(sonicde)
 provides=($_pkgname)
 conflicts=($_pkgname)
-#source=("git+${url}.git#tag=${_pkgtag}")
-#source=("git+${url}.git#commit=6b537a5596450514971412706e74b6dfadd36a57")
 source=("${url}/archive/refs/tags/${_pkgtag}.tar.gz")
 install="$pkgname.install"
 options=(!debug)
