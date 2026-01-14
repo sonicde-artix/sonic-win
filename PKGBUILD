@@ -21,7 +21,6 @@ depends=(aurorae
          kcoreaddons
          kcrash
          kdeclarative
-         kdecoration
          kglobalaccel
          kglobalacceld
          kguiaddons
@@ -74,10 +73,10 @@ groups=(sonicde)
 provides=($_pkgname)
 conflicts=($_pkgname)
 #source=("${url}/archive/refs/tags/${_pkgtag}.tar.gz")
-source=("git+${url}.git")
+source=("git+${url}.git#tag=$pkgver")
 install="$pkgname.install"
 options=(!debug)
-sha256sums=('SKIP')
+sha256sums=('a77fb21faf11240af95160365f67f20538add7b77599da6d025150b4841898c8')
 
 build() {
   #cmake -B build -S $pkgname-$_pkgtag \

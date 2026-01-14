@@ -34,7 +34,6 @@ pkgbase:
     - kcoreaddons
     - kcrash
     - kdeclarative
-    - kdecoration
     - kglobalaccel
     - kglobalacceld
     - kguiaddons
@@ -83,9 +82,9 @@ pkgbase:
   options:
     - '!debug'
   source:
-    - git+https://github.com/Sonic-DE/sonic-win.git
+    - git+https://github.com/Sonic-DE/sonic-win.git#tag=6.5.5
   sha256sums:
-    - SKIP
+    - a77fb21faf11240af95160365f67f20538add7b77599da6d025150b4841898c8
 pkgname:
   - name: sonic-win
 # generated with artixpkg 0.37.4-1-any
