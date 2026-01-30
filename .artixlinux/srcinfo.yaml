@@ -1,10 +1,10 @@
 ---
-version: 6.5.5-1
+version: 6.5.5-2
 pkgbase:
   name: sonic-win
   pkgdesc: An X11-only, lighter-weight fork of KWin
   pkgver: 6.5.5
-  pkgrel: 1
+  pkgrel: 2
   url: https://github.com/Sonic-DE/sonic-win
   install: sonic-win.install
   arch:
@@ -87,4 +87,4 @@ pkgbase:
     - a77fb21faf11240af95160365f67f20538add7b77599da6d025150b4841898c8
 pkgname:
   - name: sonic-win
-# generated with artixpkg 0.37.4-1-any
+# generated with artixpkg 0.37.5-1-any
