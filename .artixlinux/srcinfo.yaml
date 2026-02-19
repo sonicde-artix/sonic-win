@@ -17,7 +17,6 @@ pkgbase:
     - extra-cmake-modules
     - git
     - kdoctools
-    - libelogind
     - plasma-wayland-protocols
     - python
     - wayland-protocols
@@ -71,6 +70,7 @@ pkgbase:
     - qt6-svg
     - qt6-tools
     - qt6-wayland
+    - libelogind
     - wayland
     - xcb-util-cursor
     - xcb-util-keysyms

@@ -58,6 +58,7 @@ depends=(aurorae
          qt6-svg
          qt6-tools
          qt6-wayland
+         libelogind
          wayland
          xcb-util-cursor
          xcb-util-keysyms
@@ -65,7 +66,6 @@ depends=(aurorae
 makedepends=(extra-cmake-modules
              git
              kdoctools
-             libelogind
              plasma-wayland-protocols
              python
              wayland-protocols)
@@ -80,6 +80,7 @@ sha256sums=('84f12078e43159c15229ff54f48aab87867d3571988a263d13367e8b36e52655')
 
 build() {
   cmake -B build -S $pkgname-$_pkgtag \
+    -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DBUILD_TESTING=OFF
   cmake --build build
