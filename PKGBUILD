@@ -2,9 +2,9 @@
 
 pkgname=sonic-win
 _pkgname=kwin-x11
-pkgver=6.5.5
+pkgver=6.6.0
 _pkgtag=$pkgver
-pkgrel=2
+pkgrel=1
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
@@ -72,15 +72,14 @@ makedepends=(extra-cmake-modules
 groups=(sonicde)
 provides=($_pkgname)
 conflicts=($_pkgname)
-#source=("${url}/archive/refs/tags/${_pkgtag}.tar.gz")
-source=("git+${url}.git#tag=$pkgver")
+source=("${url}/archive/refs/tags/${_pkgtag}.tar.gz")
+#source=("git+${url}.git#tag=$pkgver")
 install="$pkgname.install"
 options=(!debug)
-sha256sums=('a77fb21faf11240af95160365f67f20538add7b77599da6d025150b4841898c8')
+sha256sums=('84f12078e43159c15229ff54f48aab87867d3571988a263d13367e8b36e52655')
 
 build() {
-  #cmake -B build -S $pkgname-$_pkgtag \
-  cmake -B build -S $pkgname \
+  cmake -B build -S $pkgname-$_pkgtag \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DBUILD_TESTING=OFF
   cmake --build build
