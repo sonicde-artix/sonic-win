@@ -4,6 +4,7 @@ pkgname=sonic-win
 _pkgname=kwin-x11
 pkgver=6.6.2.1
 _pkgtag=$pkgver
+_plasmaver=$(echo $pkgver | cut -f1-3 -d'.')
 pkgrel=1
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
@@ -43,7 +44,7 @@ depends=(aurorae
          libdisplay-info
          libdrm
          libepoxy
-         libplasma=$pkgver
+         libplasma=$_plasmaver
          libqaccessibilityclient-qt6
          libx11
          libxcb

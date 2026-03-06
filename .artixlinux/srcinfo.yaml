@@ -55,7 +55,7 @@ pkgbase:
     - libdisplay-info
     - libdrm
     - libepoxy
-    - libplasma=6.6.2.1
+    - libplasma=6.6.2
     - libqaccessibilityclient-qt6
     - libx11
     - libxcb
