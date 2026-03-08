@@ -1,11 +1,10 @@
 # Maintainer: artist for Artix Linux
 
 pkgname=sonic-win
-_pkgname=kwin-x11
 pkgver=6.6.2.1
 _pkgtag=$pkgver
-_plasmaver=$(echo $pkgver | cut -f1-3 -d'.')
-pkgrel=1
+_plasmaver=6.6.2
+pkgrel=2
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
@@ -71,8 +70,8 @@ makedepends=(extra-cmake-modules
              python
              wayland-protocols)
 groups=(sonicde)
-provides=($_pkgname)
-conflicts=($_pkgname)
+provides=(kwin-x11)
+conflicts=(kwin-x11)
 source=("${url}/archive/refs/tags/${_pkgtag}.tar.gz")
 #source=("git+${url}.git#tag=$pkgver")
 install="$pkgname.install"
