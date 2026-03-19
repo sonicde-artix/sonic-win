@@ -1,10 +1,10 @@
 ---
-version: 6.6.2.1-2
+version: 6.6.3-1
 pkgbase:
   name: sonic-win
   pkgdesc: An X11-only, lighter-weight fork of KWin
-  pkgver: 6.6.2.1
-  pkgrel: 2
+  pkgver: 6.6.3
+  pkgrel: 1
   url: https://github.com/Sonic-DE/sonic-win
   install: sonic-win.install
   arch:
@@ -55,7 +55,7 @@ pkgbase:
     - libdisplay-info
     - libdrm
     - libepoxy
-    - libplasma=6.6.2
+    - libplasma=6.6.3
     - libqaccessibilityclient-qt6
     - libx11
     - libxcb
@@ -82,9 +82,9 @@ pkgbase:
   options:
     - '!debug'
   source:
-    - https://github.com/Sonic-DE/sonic-win/archive/refs/tags/6.6.2.1.tar.gz
+    - https://github.com/Sonic-DE/sonic-win/archive/refs/tags/6.6.3.tar.gz
   sha256sums:
-    - 781e56db40ff06c204730cd4e67461a963457814e56e2a172fd1dfb12eef5c7a
+    - deb49415ebf2befb29927e367f5892c63dd7dbf9d50ca89a7864a169972653b5
 pkgname:
   - name: sonic-win
 # generated with artixpkg 0.38.2-1-any
