@@ -4,13 +4,14 @@ pkgname=sonic-win
 pkgver=6.6.3
 _pkgtag=$pkgver
 _plasmaver=$pkgver
-pkgrel=1
+pkgrel=2
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
 license=('LGPL-2.0-or-later')
 depends=(aurorae
          breeze
+         dbus
          gcc-libs
          glibc
          plasma-activities
@@ -21,8 +22,8 @@ depends=(aurorae
          kcoreaddons
          kcrash
          kdeclarative
-         kglobalaccel
-         kglobalacceld
+         sonic-frameworks-keybind
+         sonic-keybind-daemon
          kguiaddons
          ki18n
          kirigami
@@ -58,7 +59,6 @@ depends=(aurorae
          qt6-svg
          qt6-tools
          qt6-wayland
-         libelogind
          wayland
          xcb-util-cursor
          xcb-util-keysyms
@@ -66,9 +66,7 @@ depends=(aurorae
 makedepends=(extra-cmake-modules
              git
              kdoctools
-             plasma-wayland-protocols
-             python
-             wayland-protocols)
+             python)
 groups=(sonicde)
 provides=(kwin-x11)
 conflicts=(kwin-x11)
