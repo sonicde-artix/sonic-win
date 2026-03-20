@@ -24,7 +24,6 @@ pkgbase:
     - dbus
     - gcc-libs
     - glibc
-    - plasma-activities
     - kauth
     - kcmutils
     - kcolorscheme
@@ -32,8 +31,6 @@ pkgbase:
     - kcoreaddons
     - kcrash
     - kdeclarative
-    - sonic-frameworks-keybind
-    - sonic-keybind-daemon
     - kguiaddons
     - ki18n
     - kirigami
@@ -46,7 +43,6 @@ pkgbase:
     - kservice
     - ksvg
     - kwidgetsaddons
-    - kwindowsystem
     - kxmlgui
     - lcms2
     - libcanberra
@@ -60,6 +56,7 @@ pkgbase:
     - libxkbcommon
     - libxkbcommon-x11
     - mesa
+    - plasma-activities
     - qt6-5compat
     - qt6-base
     - qt6-declarative

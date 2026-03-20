@@ -14,7 +14,6 @@ depends=(aurorae
          dbus
          gcc-libs
          glibc
-         plasma-activities
          kauth
          kcmutils
          kcolorscheme
@@ -22,8 +21,6 @@ depends=(aurorae
          kcoreaddons
          kcrash
          kdeclarative
-         sonic-frameworks-keybind
-         sonic-keybind-daemon
          kguiaddons
          ki18n
          kirigami
@@ -36,7 +33,7 @@ depends=(aurorae
          kservice
          ksvg
          kwidgetsaddons
-         kwindowsystem
+         #kwindowsystem
          kxmlgui
          lcms2
          libcanberra
@@ -50,6 +47,7 @@ depends=(aurorae
          libxkbcommon
          libxkbcommon-x11
          mesa
+         plasma-activities
          qt6-5compat
          qt6-base
          qt6-declarative
