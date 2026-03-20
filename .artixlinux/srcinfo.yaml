@@ -50,6 +50,7 @@ pkgbase:
     - libdisplay-info
     - libdrm
     - libepoxy
+    - libplasma
     - libqaccessibilityclient-qt6
     - libx11
     - libxcb
@@ -66,7 +67,6 @@ pkgbase:
     - qt6-tools
     - qt6-wayland
     - sonic-frameworks-keybind
-    - sonic-interface-libraries
     - sonic-keybind-daemon
     - sonic-screenlocker
     - xcb-util-cursor

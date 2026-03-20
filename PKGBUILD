@@ -40,6 +40,7 @@ depends=(aurorae
          libdisplay-info
          libdrm
          libepoxy
+         libplasma
          libqaccessibilityclient-qt6
          libx11
          libxcb
@@ -56,10 +57,9 @@ depends=(aurorae
          qt6-tools
          qt6-wayland
          sonic-frameworks-keybind
-         sonic-interface-libraries
+         #sonic-interface-libraries
          sonic-keybind-daemon
          sonic-screenlocker
-         #wayland
          xcb-util-cursor
          xcb-util-keysyms
          xcb-util-wm)
