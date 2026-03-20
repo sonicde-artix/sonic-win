@@ -4,7 +4,7 @@ pkgname=sonic-win
 pkgver=6.6.3
 _pkgtag=$pkgver
 _plasmaver=$pkgver
-pkgrel=4
+pkgrel=5
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
@@ -33,7 +33,7 @@ depends=(aurorae
          kservice
          ksvg
          kwidgetsaddons
-         #kwindowsystem
+         kwindowsystem
          kxmlgui
          lcms2
          libcanberra
