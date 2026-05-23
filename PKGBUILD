@@ -1,8 +1,8 @@
-# Maintainer: artist for Artix Linux
+# Maintainer: callmetango
+# Contributor: artist <artist@artixlinux.org>
 
 pkgname=sonic-win
 pkgver=6.6.5
-_pkgtag=$pkgver
 pkgrel=4
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
@@ -12,16 +12,13 @@ depends=(aurorae
          breeze
          elogind
          glibc
-         sonic-frameworks-auth
          kcmutils
          kcolorscheme
          kconfig
-         sonic-frameworks-core-addons
          kcrash
          kdeclarative
          kguiaddons
          ki18n
-         sonic-frameworks-quick-ui
          kitemmodels
          knewstuff
          knighttime
@@ -53,8 +50,11 @@ depends=(aurorae
          qt6-tools
          sonic-activities
          sonic-frameworks-auth
+         sonic-frameworks-auth
+         sonic-frameworks-core-addons
          sonic-frameworks-core-addons
          sonic-frameworks-keybind
+         sonic-frameworks-quick-ui
          sonic-frameworks-quick-ui
          sonic-frameworks-windowsystem
          sonic-interface-libraries
@@ -67,15 +67,15 @@ makedepends=(extra-cmake-modules
              kdoctools
              python)
 groups=(sonicde)
-provides=(kwin-x11)
 conflicts=(kwin-x11)
 replaces=(kwin-x11)
-source=("${url}/archive/refs/tags/${_pkgtag}.tar.gz")
+provides=(kwin-x11)
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 options=(!debug)
 sha256sums=('d9d1539b8a962dda9c9999326202f05b4a3eb484ffee97b620d33e3e9e73290a')
 
 build() {
-  cmake -B build -S $pkgname-$_pkgtag \
+  cmake -B build -S $pkgname-$pkgver \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DBUILD_TESTING=OFF
@@ -87,4 +87,3 @@ package() {
 
   rm -r $pkgdir/usr/lib/systemd
 }
-
