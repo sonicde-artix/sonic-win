@@ -1,29 +1,27 @@
 # Maintainer: artist for Artix Linux
 
 pkgname=sonic-win
-pkgver=6.6.3
+pkgver=6.6.5
 _pkgtag=$pkgver
-_plasmaver=$pkgver
-pkgrel=7
+pkgrel=4
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
 license=('LGPL-2.0-or-later')
 depends=(aurorae
          breeze
-         dbus
-         gcc-libs
+         elogind
          glibc
-         kauth
+         sonic-frameworks-auth
          kcmutils
          kcolorscheme
          kconfig
-         kcoreaddons
+         sonic-frameworks-core-addons
          kcrash
          kdeclarative
          kguiaddons
          ki18n
-         kirigami
+         sonic-frameworks-quick-ui
          kitemmodels
          knewstuff
          knighttime
@@ -33,14 +31,13 @@ depends=(aurorae
          kservice
          ksvg
          kwidgetsaddons
-         kwindowsystem
          kxmlgui
          lcms2
          libcanberra
          libdisplay-info
          libdrm
          libepoxy
-         libplasma
+         libgcc
          libqaccessibilityclient-qt6
          libx11
          libxcb
@@ -48,32 +45,34 @@ depends=(aurorae
          libxkbcommon
          libxkbcommon-x11
          mesa
-         plasma-activities
          qt6-5compat
          qt6-base
          qt6-declarative
          qt6-sensors
          qt6-svg
          qt6-tools
-         qt6-wayland
+         sonic-activities
+         sonic-frameworks-auth
+         sonic-frameworks-core-addons
          sonic-frameworks-keybind
-         #sonic-interface-libraries
+         sonic-frameworks-quick-ui
+         sonic-frameworks-windowsystem
+         sonic-interface-libraries
          sonic-keybind-daemon
          sonic-screenlocker
          xcb-util-cursor
          xcb-util-keysyms
          xcb-util-wm)
 makedepends=(extra-cmake-modules
-             git
              kdoctools
              python)
 groups=(sonicde)
 provides=(kwin-x11)
 conflicts=(kwin-x11)
+replaces=(kwin-x11)
 source=("${url}/archive/refs/tags/${_pkgtag}.tar.gz")
-install="$pkgname.install"
 options=(!debug)
-sha256sums=('deb49415ebf2befb29927e367f5892c63dd7dbf9d50ca89a7864a169972653b5')
+sha256sums=('d9d1539b8a962dda9c9999326202f05b4a3eb484ffee97b620d33e3e9e73290a')
 
 build() {
   cmake -B build -S $pkgname-$_pkgtag \
