@@ -3,7 +3,7 @@
 
 pkgname=sonic-win
 pkgver=6.6.5
-pkgrel=4
+pkgrel=5
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
