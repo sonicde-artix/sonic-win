@@ -2,8 +2,8 @@
 # Contributor: artist <artist@artixlinux.org>
 
 pkgname=sonic-win
-pkgver=6.6.5
-pkgrel=5
+pkgver=6.6.5.1
+pkgrel=1
 pkgdesc='An X11-only, lighter-weight fork of KWin'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
@@ -72,7 +72,7 @@ replaces=(kwin-x11)
 provides=(kwin-x11)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 options=(!debug)
-sha256sums=('d9d1539b8a962dda9c9999326202f05b4a3eb484ffee97b620d33e3e9e73290a')
+sha256sums=('ef1e7da51724cafb3fdd133451651163e2208d9dcc1d42e5c1e706d5ac27fd3c')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
