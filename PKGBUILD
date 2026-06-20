@@ -1,23 +1,26 @@
 # Maintainer: callmetango
 # Contributor: artist <artist@artixlinux.org>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Antonio Rojas <arojas@archlinux.org>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-win
 pkgver=6.6.5.1
-pkgrel=1
-pkgdesc='An X11-only, lighter-weight fork of KWin'
+pkgrel=2
+pkgdesc='An easy to use, but flexible, X Window Manager'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-win'
-license=('LGPL-2.0-or-later')
+license=(LGPL-2.0-or-later)
 depends=(aurorae
          breeze
          elogind
+         gcc-libs
          glibc
          kcmutils
          kcolorscheme
          kconfig
          kcrash
          kdeclarative
-         kguiaddons
          ki18n
          kitemmodels
          knewstuff
@@ -34,7 +37,6 @@ depends=(aurorae
          libdisplay-info
          libdrm
          libepoxy
-         libgcc
          libqaccessibilityclient-qt6
          libx11
          libxcb
@@ -49,12 +51,11 @@ depends=(aurorae
          qt6-svg
          qt6-tools
          sonic-activities
-         sonic-frameworks-auth
+         sonic-decoration
          sonic-frameworks-auth
          sonic-frameworks-core-addons
-         sonic-frameworks-core-addons
+         sonic-frameworks-gui-addons
          sonic-frameworks-keybind
-         sonic-frameworks-quick-ui
          sonic-frameworks-quick-ui
          sonic-frameworks-windowsystem
          sonic-interface-libraries
@@ -63,20 +64,17 @@ depends=(aurorae
          xcb-util-cursor
          xcb-util-keysyms
          xcb-util-wm)
-makedepends=(extra-cmake-modules
-             kdoctools
-             python)
-groups=(sonicde)
-conflicts=(kwin-x11)
-replaces=(kwin-x11)
+makedepends=(python
+             sonic-frameworks-cmake-modules
+             sonic-frameworks-doctools)
 provides=(kwin-x11)
+conflicts=(kwin-x11)
+groups=(sonicde)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-options=(!debug)
 sha256sums=('ef1e7da51724cafb3fdd133451651163e2208d9dcc1d42e5c1e706d5ac27fd3c')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
-    -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DBUILD_TESTING=OFF
   cmake --build build
